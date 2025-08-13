@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 // Components
@@ -8,7 +8,7 @@ import Cart from "../cart/index";
 import * as Styles from "./styles";
 
 // Utilities
-import { loginUser, logoutUser } from "../../redux/user/actions";
+import { login, logout } from "../../redux/user/slice";
 import { selectProductsCount } from "../../redux/Cart/cart.seletors";
 
 function Header() {
@@ -16,7 +16,7 @@ function Header() {
 
   const dispatch = useDispatch();
 
-  const { currentUser } = useSelector((state) => state.userReducer);
+  const { currentUser }=  useSelector(rootReducer => rootReducer.userReducer);
 
   const productsCount = useSelector(selectProductsCount)
 
@@ -25,11 +25,11 @@ function Header() {
   };
 
   const handleLoginClick = () => {
-    dispatch(loginUser({ name: "Felipe Rocha", email: "felipe@rocha.com" }));
+    dispatch(login({ name: "Felipe Rocha", email: "felipe@rocha.com" }));
   };
 
   const handleLogoutClick = () => {
-    dispatch(logoutUser());
+    dispatch(logout());
   };
 
   return (
