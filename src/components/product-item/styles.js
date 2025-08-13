@@ -5,7 +5,7 @@ export const ProductContainer = styled.div`
   flex-direction: column;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 
@@ -23,7 +23,7 @@ export const ProductInfo = styled.div`
 export const ProductImage = styled.div`
   background-image: ${(props) => `url('${props.imageUrl}')`};
   height: 380px;
-  width: 300px;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

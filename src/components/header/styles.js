@@ -21,6 +21,7 @@ export const Buttons = styled.div`
 
   div {
     font-weight: 500;
+    text-align: center;
 
     &:hover {
       cursor: pointer;

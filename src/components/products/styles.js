@@ -5,7 +5,7 @@ export const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
   justify-items: start;
   padding: 40px 0 40px 40px;
-  grid-row-gap: 20px;
+  gap: 20px 5px;
 
   @media (max-width: 768px) {
     display: flex;
